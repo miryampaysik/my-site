@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Miryam Paysik - My Hobbies Gallery</title>
+  <style>
+    body {
+      background-color: #f5f0fa;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 40px;
+    }
+
+    h1 {
+      color: #4b0082;
+    }
+
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 30px;
+    }
+
+    figure {
+      margin: 0;
+      width: 300px;
+    }
+
+    figure img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+
+    figure img:hover {
+      transform: scale(1.05);
+    }
+
+    figcaption {
+      margin-top: 8px;
+      font-size: 16px;
+      color: #4b0082;
+      font-weight: bold;
+    }
+
+    /* ריספונסיביות בסיסית */
+    @media (max-width: 650px) {
+      .gallery {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      figure {
+        width: 90%;
+        max-width: 300px;
+      }
+    }
+	
+	
+    /* כפתור חזור בסגנון דומה */
+    .back-button {
+      margin-top: 20px;
+      padding: 12px 20px;
+      background-color: #4b0082;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background-color 0.3s ease;
+    }
+
+    .back-button:hover {
+      background-color: #6a0dad;
+    }
+	
+  </style>
+</head>
+<body>
+
+  <h1>My Hobbies - Gallery</h1>
+  <div class="gallery">
+    <figure>
+      <img src="images/hobby1.jpeg" alt="Painting on canvas" />
+      <figcaption>Camping</figcaption>
+    </figure>
+    <figure>
+      <img src="images/hobby2.jpeg" alt="Gardening with flowers" />
+      <figcaption>Trip</figcaption>
+    </figure>
+    <figure>
+      <img src="images/hobby3.jpeg" alt="Playing guitar" />
+      <figcaption>Painting</figcaption>
+    </figure>
+    <figure>
+      <img src="images/hobby4.jpeg" alt="Cooking a delicious meal" />
+      <figcaption>Nature</figcaption>
+    </figure>
+    <figure>
+      <img src="images/hobby5.jpeg" alt="Hiking in nature" />
+      <figcaption>Nature</figcaption>
+    </figure>
+  </div>
+  
+	<br><br>
+  <button class="back-button" onclick="history.back()">Back</button>
+
+</body>
+</html>
